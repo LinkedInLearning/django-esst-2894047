@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{% url 'notes.new' %}" method='POST'>
+    {{ form }}
+    <button type="submit" class="btn btn-primary my-5">Submit</button>
+</form>
+{% endblock %}
