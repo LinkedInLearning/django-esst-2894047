@@ -33,6 +33,7 @@ class NotesListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return self.request.user.notes.all()
 
-class NotesDetailView(DetailView):
+class NotesDetailView(LoginRequiredMixin, DetailView):
     model = Notes
     context_object_name = "note"
+    login_url = "/admin"
