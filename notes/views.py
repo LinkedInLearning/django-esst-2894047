@@ -25,7 +25,12 @@ class NotesCreateView(LoginRequiredMixin, CreateView):
     form_class = NotesForm
     login_url = "/login"
 
-
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return HttpResponseRedirect(self.get_success_url())
+        
 class NotesListView(LoginRequiredMixin, ListView):
     model = Notes
     context_object_name = "notes"
