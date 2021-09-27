@@ -1,9 +1,10 @@
-# COURSENAME
+# Django Essential Training
 This is the repository for the LinkedIn Learning course Django Essential Training. The full course is available from [LinkedIn Learning][lil-course-url].
 
-![course-name-alt-text][lil-thumbnail-url] 
+![Django Essential Training][lil-thumbnail-url] 
 
-_See the readme file in the main branch for updated instructions and information._
+Django is a robust and powerful framework with a lot of moving parts. Although starting a new project can be quite easy, there is a lot to uncover. This course teaches fundamentals, such as what a framework is, what an HTTP request is, and how Django replies to HTTP requests. Software developer and podcaster Leticia Portella walks you through each step of building a working system that can create, edit, and list books per user with an authentication system. Topics include getting started, creating users and data, ORMs, creating a dynamic template, Django class-based files and static views, and so much more!
+
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
 
@@ -29,8 +30,15 @@ To resolve this issue:
 3. [Course-specific instructions]
 
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+### Instructor
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+Leticia Portella 
+                            
 
+
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/leticia-portella).
+
+[lil-course-url]: https://www.linkedin.com/learning/django-essential-training
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2894047/2894047-1632244073199-16x9.jpg
