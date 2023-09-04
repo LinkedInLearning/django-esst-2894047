@@ -61,6 +61,9 @@ Quit the server with CTRL-BREAK.
 Not Found: /favicon.ico
 [04/Sep/2023 15:46:36] "GET /favicon.ico HTTP/1.1" 404 2114
 
+## Create home app in smartnotes project
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>django-admin startapp home
+
 ## The MVT framework (Model - View - Template)
 BROWSER GET /home --> urls.py --> views.py --> def home
 
@@ -105,3 +108,20 @@ $$ p --> vartak
 
 ## Django Object Relational Mapper (ORM)
 Classes --> MakeMigrations --> Migrate --> Database
+
+## Create notes app in smartnotes project
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>django-admin startapp notes
+
+## Make migrations
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>python manage.py makemigrations  
+Migrations for 'notes':
+  notes\migrations\0001_initial.py
+    - Create model Notes
+
+## Apply migrations
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, notes, sessions
+Running migrations:
+  Applying notes.0001_initial... OK
+
