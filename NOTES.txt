@@ -37,3 +37,9 @@ Successfully installed pip-23.2.1
 (sourabh-py-venv) C:\Users\varta>django-admin --version                       
 4.2.5
 
+## Change to project directory
+(sourabh-py-venv) C:\Users\varta>cd repos\django-essentials-leticia
+
+## Create the new django project
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>django-admin startproject smartnotes .
+
