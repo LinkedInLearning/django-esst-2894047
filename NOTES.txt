@@ -103,3 +103,5 @@ Superuser created successfully.
 
 $$ p --> vartak
 
+## Django Object Relational Mapper (ORM)
+Classes --> MakeMigrations --> Migrate --> Database
