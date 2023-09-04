@@ -60,3 +60,7 @@ Quit the server with CTRL-BREAK.
 [04/Sep/2023 15:46:36] "GET / HTTP/1.1" 200 10664
 Not Found: /favicon.ico
 [04/Sep/2023 15:46:36] "GET /favicon.ico HTTP/1.1" 404 2114
+
+## The MVT framework (Model - View - Template)
+BROWSER GET /home --> urls.py --> views.py --> def home
+
