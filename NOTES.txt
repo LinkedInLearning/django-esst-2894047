@@ -1,0 +1,39 @@
+## Create python virtual environment (venv)
+C:\Users\varta>py -m venv sourabh-py-venv 
+
+## Activate the virtual environment (venv)
+C:\Users\varta>.\sourabh-py-venv\Scripts\activate.bat 
+
+## Install Django web framework
+(sourabh-py-venv) C:\Users\varta>py -m pip install Django
+Collecting Django
+  Downloading Django-4.2.5-py3-none-any.whl (8.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 10.0 MB/s eta 0:00:00
+Collecting asgiref<4,>=3.6.0 (from Django)
+  Using cached asgiref-3.7.2-py3-none-any.whl (24 kB)
+Collecting sqlparse>=0.3.1 (from Django)
+  Using cached sqlparse-0.4.4-py3-none-any.whl (41 kB)
+Collecting tzdata (from Django)
+  Using cached tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+Successfully installed Django-4.2.5 asgiref-3.7.2 sqlparse-0.4.4 tzdata-2023.3
+
+[notice] A new release of pip is available: 23.1.2 -> 23.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+## Optionally, upgrade pip package manager to latest version
+(sourabh-py-venv) C:\Users\varta>python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\varta\sourabh-py-venv\lib\site-packages (23.1.2)
+Collecting pip
+  Using cached pip-23.2.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.1.2
+    Uninstalling pip-23.1.2:
+      Successfully uninstalled pip-23.1.2
+Successfully installed pip-23.2.1
+
+## Check the installed Django framework version
+(sourabh-py-venv) C:\Users\varta>django-admin --version                       
+4.2.5
+
