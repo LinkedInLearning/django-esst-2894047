@@ -61,6 +61,9 @@ Quit the server with CTRL-BREAK.
 Not Found: /favicon.ico
 [04/Sep/2023 15:46:36] "GET /favicon.ico HTTP/1.1" 404 2114
 
+## Create home app in smartnotes project
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>django-admin startapp home
+
 ## The MVT framework (Model - View - Template)
 BROWSER GET /home --> urls.py --> views.py --> def home
 
@@ -102,4 +105,63 @@ Bypass password validation and create user anyway? [y/N]: y
 Superuser created successfully.
 
 $$ p --> vartak
+
+## Django Object Relational Mapper (ORM)
+Classes --> MakeMigrations --> Migrate --> Database
+
+## Create notes app in smartnotes project
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>django-admin startapp notes
+
+## Make migrations
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>python manage.py makemigrations  
+Migrations for 'notes':
+  notes\migrations\0001_initial.py
+    - Create model Notes
+
+## Apply migrations
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, notes, sessions
+Running migrations:
+  Applying notes.0001_initial... OK
+
+## Django Interactive Shell
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>python manage.py shell
+Python 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from notes.models import Notes
+>>> mynote = Notes.objects.get(pk='1')
+>>> mynote
+<Notes: Notes object (1)>
+>>> print(mynote)
+Notes object (1)
+>>> mynote.title
+'My first note'
+>>> mynote.text
+'Django is so cool!'
+>>> Notes.objects.all()
+<QuerySet [<Notes: Notes object (1)>]>
+>>> note2 = Notes.object.create(title="second note", text="my second note!!")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Notes' has no attribute 'object'
+>>> note2 = Notes.objects.create(title="second note", text="my second note!!") 
+>>> Notes.objects.all()                                                        
+<QuerySet [<Notes: Notes object (1)>, <Notes: Notes object (2)>]>
+>>> Notes.objects.filter(title__startswith="My")
+<QuerySet [<Notes: Notes object (1)>]>
+>>> Notes.objects.filter(text__icontains="cool") 
+<QuerySet [<Notes: Notes object (1)>]>
+>>> Notes.objects.filter(title__icontains="cool") 
+<QuerySet []>
+>>> Notes.objects.exclude(text__icontains="cool") 
+<QuerySet [<Notes: Notes object (2)>]>
+>>> Notes.objects.filter(text__icontains="cool").exclude(title__icontains="cool")
+<QuerySet [<Notes: Notes object (1)>]>
+>>> Notes.objects.filter(text__icontains="cool").exclude(title__icontai="cool")   
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\varta\sourabh-py-venv\Lib\site-packages\django\db\models\query.py", line 1444, in exclude
+    return self._filter_or_exclude(True, args, kwargs)
 
