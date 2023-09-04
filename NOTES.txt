@@ -64,3 +64,5 @@ Not Found: /favicon.ico
 ## The MVT framework (Model - View - Template)
 BROWSER GET /home --> urls.py --> views.py --> def home
 
+## Django Template Language (DTL)
+Templates written in DTL --> DTL Interpreter --> HTML sent to the browser
