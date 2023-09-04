@@ -43,3 +43,26 @@ Successfully installed pip-23.2.1
 ## Create the new django project
 (sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>django-admin startproject smartnotes .
 
+## Run the development local web server
+(sourabh-py-venv) C:\Users\varta\repos\django-essentials-leticia>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+September 04, 2023 - 15:45:15
+Django version 4.2.5, using settings 'smartnotes.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[04/Sep/2023 15:46:36] "GET / HTTP/1.1" 200 10664
+Not Found: /favicon.ico
+[04/Sep/2023 15:46:36] "GET /favicon.ico HTTP/1.1" 404 2114
+
+## The MVT framework (Model - View - Template)
+BROWSER GET /home --> urls.py --> views.py --> def home
+
+## Django Template Language (DTL)
+Templates written in DTL --> DTL Interpreter --> HTML sent to the browser
