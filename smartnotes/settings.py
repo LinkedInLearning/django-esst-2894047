@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-%+znv4)0gkie0bfp20khpg*qe!92(hzcg)13xkww1p#pvdb1++
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangotest2024-atbvhzceb2fkeaaj.eastus-01.azurewebsites.net']
+ALLOWED_HOSTS = [ 'djangotest2024-atbvhzceb2fkeaaj.eastus-01.azurewebsites.net' ]
 
 CSRF_TRUSTED_ORIGINS = [ 'https://localhost:8000', 'http://127.0.0.1:8000', 'https://djangotest2024-atbvhzceb2fkeaaj.eastus-01.azurewebsites.net' ]
 
