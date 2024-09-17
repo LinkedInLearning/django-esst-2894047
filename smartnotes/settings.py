@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [ 'localhost', '127.0.0.1', 'djago-notes-avgqbra8apa0b3c8.australiacentral-01.azurewebsites.net' ]
 
-CSRF_TRUSTED_ORIGINS = [ 'https://localhost:8000', 'http://127.0.0.1:8000' ]
+CSRF_TRUSTED_ORIGINS = [ 'https://localhost:8000', 'http://127.0.0.1:8000', 'https://djago-notes-avgqbra8apa0b3c8.australiacentral-01.azurewebsites.net' ]
 
 # Application definition
 
