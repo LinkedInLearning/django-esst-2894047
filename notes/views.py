@@ -12,7 +12,7 @@ class NotesCreateView(CreateView):
 class NotesListView(ListView):
     model = Notes
     context_object_name = "notes"
-    template_name = "notes/notes_list.html" #no es necesario ya que se usa el nombre correcto notes_list 
+    #template_name = "notes/notes_list.html" #no es necesario ya que se usa el nombre correcto notes_list 
 
 class NotesDetailView(DetailView):
     model = Notes
