@@ -29,7 +29,10 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-      
+
+      - name: Print environment variables
+        run: python print_env.py
+  
       - name: Check DJANGO_SETTINGS_MODULE
         run: echo $DJANGO_SETTINGS_MODULE
       
