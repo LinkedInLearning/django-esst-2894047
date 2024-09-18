@@ -1,6 +1,7 @@
 # https://www.youtube.com/watch?v=QjEVmQ4rcWA&t=195s
 # https://github.com/NickMol/Django-Deploy-on-Azure
 import os 
+import psycopg2
 from .settings import *
 from .settings import BASE_DIR
 
@@ -35,3 +36,15 @@ DATABASES = {
         'PASSWORD': conn_str_params['password'],
     }
 }
+
+# Verify BD connection
+try:
+    conn = psycopg2.connect(
+        dbname=conn_str_params['dbname'],
+        user=conn_str_params['user'],
+        password=conn_str_params['password'],
+        host=conn_str_params['host']
+    )
+    print("Successful PostgreSQL DB connection")
+except Exception as e:
+    print(f"Error to conect to PostgreSQL DB: {e}")
