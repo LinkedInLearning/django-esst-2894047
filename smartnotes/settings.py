@@ -26,9 +26,9 @@ SECRET_KEY = "django-insecure-%+znv4)0gkie0bfp20khpg*qe!92(hzcg)13xkww1p#pvdb1++
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'localhost', '127.0.0.1', 'djago-notes-avgqbra8apa0b3c8.australiacentral-01.azurewebsites.net' ]
+ALLOWED_HOSTS = [ 'localhost', '127.0.0.1' ]
 
-CSRF_TRUSTED_ORIGINS = [ 'https://localhost:8000', 'http://127.0.0.1:8000', 'https://djago-notes-avgqbra8apa0b3c8.australiacentral-01.azurewebsites.net' ]
+CSRF_TRUSTED_ORIGINS = [ 'https://localhost:8000', 'http://127.0.0.1:8000']
 
 # Application definition
 
@@ -129,7 +129,6 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
