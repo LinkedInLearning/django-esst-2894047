@@ -13,3 +13,9 @@ class NotesListView(ListView):
 class NotesDetailView(DetailView):
     model = Notes
     context_object_name = "note"
+
+class PopularNotesListView(ListView):
+    model = Notes
+    context_object_name = "notes"
+    template_name = "notes/notes_list.html"
+    queryset = Notes.objects.filter(likes__gte=1)
